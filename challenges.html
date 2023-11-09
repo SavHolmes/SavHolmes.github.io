@@ -280,12 +280,12 @@
 
       let popupDomain = 'savathletics.com';
       window.Popup = new PopupStore(popupDomain);
-      Popup.csrf = 'TgLO0RP6evvgaCwzXd0cGo4F94npjFKmU+rHlFAQGf0JNoRE5ZMcq7tSniYr4+GMVKkkaFLqHyy266TdElYkfA==';
-      Popup.apiDomain = `${window.location.origin}/api`;
-      Popup.journeyId = '7a0607e8-214c-4f15-8e21-2f71c8c8dccd';
-      Popup.popupId = '214ddff9-b534-454f-bc14-cabc2a272ba9';
-      Popup.pageHandle = 'challenges';
-      Popup.cart.cache = null;
+      // Popup.csrf = 'TgLO0RP6evvgaCwzXd0cGo4F94npjFKmU+rHlFAQGf0JNoRE5ZMcq7tSniYr4+GMVKkkaFLqHyy266TdElYkfA==';
+      // Popup.apiDomain = `${window.location.origin}/api`;
+      // Popup.journeyId = '7a0607e8-214c-4f15-8e21-2f71c8c8dccd';
+      // Popup.popupId = '214ddff9-b534-454f-bc14-cabc2a272ba9';
+      // Popup.pageHandle = 'challenges';
+      // Popup.cart.cache = null;
       document.addEventListener('DOMContentLoaded', () => {
         Popup.init();
       });
@@ -411,19 +411,7 @@
          <div class="header__item flex-grow-1 d-flex align-items-center justify-content-end">
            
   
-    <a class="header__cart position-relative d-flex align-items-center justify-content-end" data-bs-toggle="offcanvas" data-toggle="offcanvas" href="challenges.html#cart-drawer" role="button" aria-controls="cart-drawer">
-      
-        <i class="cart__icon bi bi-emoji-sunglasses"></i>
-      
-      
-        <span
-          v-cloak
-          class="header__link cart__notification--count ms-2">
-          ${ this.lineItemCount }
-        </span>
-      
-    </a>
-    
+  
   
         </div>
       </div>
@@ -489,18 +477,7 @@
         <div class="col-2 text-end">
           
   
-    <a class="header__cart position-relative d-flex align-items-center justify-content-end" data-bs-toggle="offcanvas" data-toggle="offcanvas" href="challenges.html#cart-drawer" role="button" aria-controls="cart-drawer">
-      
-        <i class="cart__icon bi bi-emoji-sunglasses"></i>
-      
-      
-        <span
-          v-cloak
-          class="header__link cart__notification--count ms-2">
-          ${ this.lineItemCount }
-        </span>
-      
-    </a>
+
     
   
         </div>
@@ -569,13 +546,6 @@
       }
     },
     created() {
-      Popup.cart.show().then(res => {
-        if(res.data != null) { 
-          this.lineItemCount = res.data.items_count
-          this.cart = res.data; 
-        }
-      })
-      this.getCart()
     },
     computed: {},
     watch: {},
